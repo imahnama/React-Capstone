@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-content {
+  height: 40px;
+  width: 100%;
+  background-color: coral;
+  color: white;
+}
