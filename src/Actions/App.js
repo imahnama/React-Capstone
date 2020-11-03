@@ -8,8 +8,8 @@ import Pokemon from '../Containers/Pokemon';
 function App() {
   return (
     <div className="app">
-      <nav className="nav-content d-flex">
-        <NavLink to="/">Search</NavLink>
+      <nav className="nav-content d-flex justify-content-center">
+        <NavLink to="/">Home</NavLink>
       </nav>
       <Switch>
         <Route path="/" exact component={PokemonList} />
