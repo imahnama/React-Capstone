@@ -9,7 +9,8 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import _ from 'lodash';
 import { Link } from 'react-router-dom';
-import { GetPokemonList } from '../Actions/pokemonActions';
+import { GetPokemonList, ChangeFilter } from '../Actions/pokemonActions';
+import PokemonTypes from '../Constants/PokemonTypes';
 
 const PokemonList = props => {
   const [search, setSearch] = useState('');
@@ -23,12 +24,19 @@ const PokemonList = props => {
     dispatch(GetPokemonList(page));
   };
 
+  const changePokemon = ({ target }) => {
+    dispatch(ChangeFilter(target.value));
+  };
+
+
+
   const ShowData = () => {
     if (!_.isEmpty(PokemonList.data)) {
+      console.log(PokemonList.data);
       return (
         <div className="list-wrapper">
           {PokemonList.data.map(el => (
-            <div className="pokemon-item card">
+            <div className="pokemon-item poke card p-5 m-3">
               <p>{el.name}</p>
               <Link to={`/pokemon/${el.name}`}>View</Link>
             </div>
@@ -51,12 +59,14 @@ const PokemonList = props => {
 
   return (
     <div>
-      <div>
-        <p>Search:</p>
-        <input type="text" onChange={e => setSearch(e.target.value)} />
-        <button onClick={() => props.history.push(`/pokemon/${search}`)}>Search</button>
-        {ShowData()}
-      </div>
+      <select name="category" onChange={changePokemon}>
+        { ['ALL', ...PokemonTypes].map(PokemonType => (
+          <option key={PokemonType} value={PokemonType}>
+            { PokemonType }
+          </option>
+        ))}
+      </select>
+      {ShowData()}
     </div>
   );
 };

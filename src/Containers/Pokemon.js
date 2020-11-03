@@ -20,15 +20,15 @@ const Pokemon = props => {
     if (!_.isEmpty(pokemonState.data[pokemonName])) {
       const pokeData = pokemonState.data[pokemonName];
       return (
-        <div className="pokemon-wrapper">
-          <div className="item">
+        <div className="pokemon-wrapper card d-flex flex-row w-50 ml-3">
+          <div className="">
             <h1>Sprites</h1>
             <img src={pokeData.sprites.front_default} alt="" />
             <img src={pokeData.sprites.back_default} alt="" />
             <img src={pokeData.sprites.front_shiny} alt="" />
             <img src={pokeData.sprites.back_shiny} alt="" />
           </div>
-          <div className="item">
+          <div className="item ml-5">
             <h1>Stats</h1>
             {pokeData.stats.map(el => (
               <p>
