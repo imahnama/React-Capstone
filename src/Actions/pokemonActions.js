@@ -2,13 +2,15 @@
 /* eslint-disable  no-unused-vars */
 import axios from 'axios';
 
+export const CHANGE_FILTER = 'CHANGE_FILTER';
+
 export const GetPokemonList = page => async dispatch => {
   try {
     dispatch({
       type: 'POKEMON_LIST_LOADING',
     });
 
-    const perPage = 15;
+    const perPage = 16;
 
     const res = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=${perPage}`);
 
@@ -42,3 +44,8 @@ export const GetPokemon = pokemon => async dispatch => {
     });
   }
 };
+
+export const ChangeFilter = filter => ({
+  type: CHANGE_FILTER,
+  filter,
+});
