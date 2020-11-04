@@ -13,10 +13,14 @@ export const GetPokemonList = page => async dispatch => {
     const perPage = 16;
 
     const res = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=${perPage}`);
+    const pokemonData = await Promise.all(res.data.results.map(async pokemon => {
+      const pokemonRecord = await axios.get(pokemon.url);
+      return pokemonRecord.data;
+    }));
 
     dispatch({
       type: 'POKEMON_LIST_SUCCESS',
-      payload: res.data,
+      payload: pokemonData,
     });
   } catch (e) {
     dispatch({

@@ -1,4 +1,4 @@
-import { CHANGE_FILTER } from '../Actions/PokemonActions';
+import { CHANGE_FILTER } from '../Actions/pokemonActions';
 
 const changeFilter = (state = 'ALL', action) => {
   switch (action.type) {

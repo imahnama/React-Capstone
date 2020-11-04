@@ -3,19 +3,9 @@ const pokemonTypes = [
   'fire',
   'water',
   'grass',
-  'electric',
-  'ice',
-  'fighting',
   'poison',
-  'ground',
-  'psychic',
+  'flying',
   'bug',
-  'rock',
-  'ghost',
-  'dark',
-  'dragon',
-  'steel',
-  'fairy',
 ];
 
 export default pokemonTypes;

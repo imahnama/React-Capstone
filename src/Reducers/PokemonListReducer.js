@@ -24,7 +24,7 @@ const PokemonListReducer = (state = DefaultState, action) => {
       return {
         ...state,
         loading: false,
-        data: action.payload.results,
+        data: action.payload,
         errorMsg: '',
         count: action.payload.count,
       };
