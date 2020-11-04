@@ -18,11 +18,11 @@ This app was deployed using heroku.
 
 ## Live Link
 
-[Live Link]()
+[Live Link](https://distracted-khorana-6c000e.netlify.app/)
 
 ## Screenshot
 
-<img width="1440" alt="Screenshot 2020-09-30 at 12 46 00" src="https://user-images.githubusercontent.com/25789009/94670233-f5096a00-031a-11eb-82f6-b394368c7fc0.png">
+<img width="1440" alt="Screenshot 2020-11-04 at 16 11 04" src="https://user-images.githubusercontent.com/25789009/98115775-65764e80-1eb8-11eb-8dc2-0f84e3b0b718.png">
 
 
 ## Getting Started
