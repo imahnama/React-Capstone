@@ -1,33 +1,22 @@
-/* eslint-disable  no-unused-vars */
-/* eslint-disable  no-use-before-define */
-/* eslint-disable  react/jsx-key */
-/* eslint-disable  no-undef */
-/* eslint-disable  react/button-has-type */
-/* eslint-disable  react/prop-types */
-/* eslint-disable  react/no-unused-prop-types */
-
-import React, { useState } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import PropTypes from 'prop-types';
-import _ from 'lodash';
-import { Link } from 'react-router-dom';
 import { GetPokemonList, ChangeFilter } from '../Actions/pokemonActions';
 import Pokemon from '../Components/Pokemon';
 import Filter from '../Components/Filter';
 
-const PokemonList = props => {
+const PokemonList = () => {
   const dispatch = useDispatch();
 
   const PokemonList = useSelector(state => state.PokemonList.data);
   const filter = useSelector(state => state.filter);
 
-  React.useEffect(() => {
-    FetchData(1);
-  }, []);
-
   const FetchData = (page = 1) => {
     dispatch(GetPokemonList(page));
   };
+
+  React.useEffect(() => {
+    FetchData(1);
+  }, []);
 
   const changePokemon = ({ target }) => {
     dispatch(ChangeFilter(target.value));

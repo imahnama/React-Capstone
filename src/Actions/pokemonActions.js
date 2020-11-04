@@ -1,10 +1,8 @@
-/* eslint-disable  import/prefer-default-export */
-/* eslint-disable  no-unused-vars */
 import axios from 'axios';
 
 export const CHANGE_FILTER = 'CHANGE_FILTER';
 
-export const GetPokemonList = page => async dispatch => {
+export const GetPokemonList = () => async dispatch => {
   try {
     dispatch({
       type: 'POKEMON_LIST_LOADING',
