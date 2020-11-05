@@ -3,7 +3,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { render } from '@testing-library/react';
 import { findByTestAtrr } from '../helpers';
-import Pokemon from '../../components/Pokemon';
+import Pokemon from '../../Components/Pokemon';
 
 describe('Pokemon Component', () => {
   describe('Component Renders', () => {
