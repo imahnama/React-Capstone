@@ -18,7 +18,7 @@ This app was deployed using heroku.
 
 ## Live Link
 
-[Live Link](https://distracted-khorana-6c000e.netlify.app/)
+[Live Link](https://safe-wildwood-78452.herokuapp.com/)
 
 ## Screenshot
 
@@ -48,6 +48,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
+
+## To Run Tests
+
+### `npm run test`
 
 ## For webpack run:
 
