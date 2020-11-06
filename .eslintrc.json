@@ -12,6 +12,8 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
+  "extends": ["airbnb", "plugin:react/recommended"],
+  "extends": ["airbnb", "airbnb/hooks"],
   "plugins": ["react"],
   "rules": {
     "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
