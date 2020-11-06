@@ -12,6 +12,7 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
+  "extends": ["airbnb", "airbnb/hooks"],
   "extends": ["airbnb", "plugin:react/recommended"],
   "plugins": ["react"],
   "rules": {
