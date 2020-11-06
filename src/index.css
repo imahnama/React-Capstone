@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-content {
+  height: 50px;
+  width: 100%;
+  background-color: #ec4c8a;
+}
+
+.nav-content a {
+  color: white;
+  font-size: 20px;
+  margin-right: 10px;
+  margin-top: 8px;
+  font-weight: bolder;
+}
+
+.search-bar input {
+  width: 350px;
+  height: 30px;
+}
+
+.search-button {
+  height: 30px;
+}
+
+.list-wrapper {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.poke {
+  background-color: #ec4c8a !important;
+  color: white;
+}
+
+.poke a {
+  color: white;
+  text-decoration: none;
+}
