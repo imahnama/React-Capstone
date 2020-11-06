@@ -1,14 +1,11 @@
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/prop-types */
-/* eslint-disable react/jsx-key */
-
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import _ from 'lodash';
 import { GetPokemon } from '../Actions/pokemonActions';
 
-const Pokemon = props => {
-  const pokemonName = props.match.params.pokemon;
+const Pokemon = ({ match }) => {
+  const pokemonName = match.params.pokemon;
   const dispatch = useDispatch();
   const pokemonState = useSelector(state => state.Pokemon);
   React.useEffect(() => {
@@ -30,7 +27,7 @@ const Pokemon = props => {
           <div className="item ml-5">
             <h1>Stats</h1>
             {pokeData.stats.map(el => (
-              <p>
+              <p key={el.stat.name}>
                 {el.stat.name}
                 {' '}
                 {el.base_stat}
@@ -39,7 +36,7 @@ const Pokemon = props => {
           </div>
           <div className="item">
             <h1>Abilities</h1>
-            {pokeData.abilities.map(el => <p>{el.ability.name}</p>)}
+            {pokeData.abilities.map(el => <p key={el.ability.name}>{el.ability.name}</p>)}
           </div>
         </div>
       );
@@ -61,6 +58,15 @@ const Pokemon = props => {
       {ShowData()}
     </div>
   );
+};
+
+Pokemon.propTypes = {
+  match: PropTypes.shape({
+    path: PropTypes.string,
+    params: PropTypes.shape({
+      pokemon: PropTypes.string,
+    }),
+  }).isRequired,
 };
 
 export default Pokemon;

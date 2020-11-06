@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
 import PokemonTypes from '../Constants/PokemonTypes';
 
 const Filter = ({ changePokemon }) => (
@@ -13,5 +13,9 @@ const Filter = ({ changePokemon }) => (
     </select>
   </div>
 );
+
+Filter.propTypes = {
+  changePokemon: PropTypes.func.isRequired,
+};
 
 export default Filter;

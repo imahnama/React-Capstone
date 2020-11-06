@@ -1,5 +1,5 @@
-/* eslint-disable  react/prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const Pokemon = ({ pokemon }) => (
@@ -10,5 +10,11 @@ const Pokemon = ({ pokemon }) => (
     </div>
   </div>
 );
+
+Pokemon.propTypes = {
+  pokemon: PropTypes.shape({
+    name: PropTypes.string,
+  }).isRequired,
+};
 
 export default Pokemon;
