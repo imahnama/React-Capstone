@@ -18,7 +18,7 @@ This app was deployed using gh-pages.
 
 ## Live Link
 
-[Live Link](https://imahnama.github.io/)
+[Live Link](https://imahnama.github.io/React-Capstone)
 
 ## Screenshot
 
