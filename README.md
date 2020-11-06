@@ -14,11 +14,11 @@ Building a simple Calculator App using React.
 - ES6
 
 ### Deployment
-This app was deployed using heroku.
+This app was deployed using gh-pages.
 
 ## Live Link
 
-[Live Link](https://safe-wildwood-78452.herokuapp.com/)
+[Live Link](https://imahnama.github.io/)
 
 ## Screenshot
 
